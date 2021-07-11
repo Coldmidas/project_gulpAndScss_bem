@@ -17,9 +17,32 @@
     line-height: 30px;
     margin: 0 auto;
     text-align: center;
+    text-transform: uppercase;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    :nth-child(3) {
+        margin-bottom: 20px;
+    }
+    input {
+        height: 54px;
+        background: #FFFFFF;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: none;
+        padding: 0 20px;
+        font-weight: normal;
+        font-size: 14px;
+        color: #4B4B4B;
+    }
+    
 }
 
 @import 'blocks/promo';
 @import 'blocks/header';
 @import 'blocks/buttons';
 @import 'blocks/advantages';
+@import 'blocks/consultation';
