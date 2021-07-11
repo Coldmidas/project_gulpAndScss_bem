@@ -2,12 +2,24 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 768px){
+        justify-content: space-evenly;
+    }
     &__logo {
         width: 250px;
         img {
             width: 100%;
         }
     }
+
+    &__officialTablet{
+        font-weight: 500;
+        font-size: 12px;
+        color: #FFFFFF;
+        text-align: center;
+        display: none;
+    }
+
     &__official {
         font-weight: 500;
         font-size: 12px;
@@ -17,12 +29,14 @@
             display: block;
             font-size: 18px;
         }
+
+
         
     }
     &__phone{
         display: block;
         font-weight: 700;
-        font-size: 18px;
+        font-size: 17px;
         color: #ffffff;
         &:hover {
             color: #ffffff;
@@ -34,4 +48,63 @@
         flex-direction: column;
         align-items: flex-end;
     }
+
+    @media (max-width: 768px) {
+        &__official {
+            font-weight: 500;
+            font-size: 10px;
+            color: #FFFFFF;
+            text-align: center;
+            span {
+                display: block;
+                font-size: 12px;
+            }
+    }
+
+    @media (max-width: 576px){
+    
+        &__official {
+            display: none;
+        }
+        &__officialTablet{
+            display: block;
+            margin-top: 20px;
+        }
+    }
+    @media (max-width: 425px) {
+        
+
+        // .header__logo
+        &__logo {
+            width: 200px;
+            padding: 5px;
+        }
+
+        // .header__official
+
+        &__official {
+
+        }
+
+        // .header__contacts
+
+        &__contacts {
+        }
+
+        // .header__phone
+
+        &__phone {
+            font-size: 15px;
+            padding-right: 7px;
+            margin-bottom: 5px;
+        }
+
+        &__btn {
+            width: 140px;
+            margin-right: 4px;
+        }
+
+
+    }
 }
+
