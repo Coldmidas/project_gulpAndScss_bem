@@ -9,6 +9,7 @@
     max-width: 950px;
     margin: 0 auto;
     padding: 0 5px;
+    position: relative;
 }
 
 .title {
@@ -46,3 +47,4 @@
 @import 'blocks/buttons';
 @import 'blocks/advantages';
 @import 'blocks/consultation';
+@import 'blocks/carusel';
