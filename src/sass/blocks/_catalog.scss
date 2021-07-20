@@ -8,6 +8,10 @@
         align-items: center;
         margin-bottom: 0;
         padding-left: 0;
+        @media (max-width: 576px) {
+            flex-direction: column;
+            margin-top: 35px;
+        }
     }
     &__tab {
         width: 220px;
@@ -27,6 +31,7 @@
         &:hover {
             box-shadow: 3px 3px 20px $main-color;
             border: none;
+            
         }
         div {
             transform: skewX(25deg);
@@ -38,10 +43,34 @@
             border: none;
             
         }
+        @media (max-width: 576px) {
+            width: 250px;
+            height: 60px;
+            margin-bottom: 15px;
+            line-height: 58px;
+        }
+        
+    }
+    &__title {
+        @media (max-width: 576px) {
+            font-size: 25px;
+        }
     }
 
     &__content {
+
         margin-top: 60px;
+        display: none;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &_active {
+            display: flex;
+        }
+        @media (max-width: 910px) {
+            justify-content: space-evenly;
+            margin-top: 30px;
+        }
+       
     }
 
     &-item {
@@ -50,6 +79,7 @@
         border: 2px solid #E8E8E8;
         padding: 20px 20px 26px 20px;
         overflow: hidden;
+        margin-bottom: 20px;
         &__img {
             display: block;
             margin: 0 auto;
@@ -83,6 +113,7 @@
             color: $main-color;
             display: block;
             margin-top: 17px;
+            text-transform: uppercase;
             &:hover {
                 color: $main-color;
             }
@@ -145,25 +176,58 @@
             }
         }
 
+       
+
         &__list {
+            position: relative;
             width: 50%;
             margin-left: 20px;
             transform: translateX(0%);
-            padding-right: 20px;
+            padding: 0 20px;
             transition: 0.5s all;
-            list-style-type: none;
             
+            list-style-type: none;
             &_active {
                 transform: translateX(-100%);
-                margin-right: 0px;
+                margin-left: 0px;
             }
 
             li{
+                position: relative;
                 font-weight: 300;
                 font-size: 14px;
                 line-height: 14px;
                 color: #555555;
                 margin-bottom: 20px;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 5px;
+                    height: 5px;
+                    background-color: $main-color;
+                    left: -14px;
+                    top: 5px;
+
+                }
+            }
+            
+        }
+
+        &__back {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(calc(-50% - 19px));
+            display: block;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 14px;
+            text-align: center;
+            text-decoration-line: underline;
+            color: $main-color;
+            text-transform: uppercase;
+            &:hover {
+                color: $main-color;
             }
             
         }
