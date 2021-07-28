@@ -36,6 +36,12 @@
         img {
             width: 100%;
         }
+        &_animation {
+            animation-name: heartbeat;
+            animation-duration: 3s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
     }
     &__subtitle {
         font-weight: bold;

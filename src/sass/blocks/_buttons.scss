@@ -9,6 +9,12 @@
     text-transform: uppercase;
     text-align: center;
     color: #ffffff;
+    &:hover {
+        background-color:$hover-color;
+        color: $main-color;
+        border: 3px solid $main-color;
+        font-weight: bold;
+    }
    
     &_main {
         margin-top: 67px;

@@ -81,16 +81,9 @@
             padding: 5px;
         }
 
-        // .header__official
 
-        &__official {
 
-        }
-
-        // .header__contacts
-
-        &__contacts {
-        }
+    
 
         // .header__phone
 
@@ -103,6 +96,10 @@
         &__btn {
             width: 140px;
             margin-right: 4px;
+            &:hover {
+                background-color:$hover-color;
+                color: $main-color;
+            }
         }
 
 
